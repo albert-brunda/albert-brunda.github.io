@@ -1,0 +1,241 @@
+/* Fixes Box Sizing */
+* {
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+/* Loads Fancy Font */ 
+@font-face {
+    font-family: 'elegant_luxmager';
+    src: url('sans_elegantlux-mager-webfont.eot');
+    src: url('sans_elegantlux-mager-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sans_elegantlux-mager-webfont.woff') format('woff'),
+         url('sans_elegantlux-mager-webfont.ttf') format('truetype'),
+         url('sans_elegantlux-mager-webfont.svg#elegant_luxmager') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sansation_lightlight';
+    src: url('sansation_light-webfont.eot');
+    src: url('sansation_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sansation_light-webfont.woff') format('woff'),
+         url('sansation_light-webfont.ttf') format('truetype'),
+         url('sansation_light-webfont.svg#sansation_lightlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html,
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+body {
+	font-family: 'elegant_luxmager', sans-serif;
+}
+
+.inset {
+	padding: 10px 0px;
+	padding-top: 50px;
+	position: relative; 
+	width: 320px;
+	margin: 0px auto 0px auto;
+}
+
+.inset::after {
+	content: "";
+	display: block;
+	width: 50px;
+	clear: both;
+}
+
+.block {
+	position: relative;
+	padding: 20px;
+	outline: 0;
+}
+
+/* Subtle Background Patterns Used to Keep loading times low */
+
+#home {
+	background-image:url(../img/intro_pattern.png);
+}
+
+#summer {
+	background-image:url(../img/autumn_pattern.png);
+	background-color:#fff;
+	color:#617c9d;
+}
+
+#winter {
+	background-image:url(../img/intro_pattern.png);
+	color:#ffffff;
+}
+
+#autumn {
+	background-image:url(../img/autumn_pattern.png);
+	background-color:#fff;
+	color:#8e5f43;
+}
+
+#spring {
+	background-image:url(../img/summer_pattern.png);
+	color: #79b1bb;
+	
+}
+
+/* Typography */
+
+.heading {
+	margin: 0px;
+}
+
+h1 {
+	font-size: 36px;
+	text-align:center;
+	font-weight:100;
+	color:#FFFFFF;
+}
+
+h2 {
+	text-align:center;
+	font-weight:100;
+	font-size: 48px;
+}
+
+/* Fixed Home Button */
+.fixed {
+    position: fixed;
+	z-index:10;
+	display:none;
+	padding-left: 1em;
+}
+
+.home {
+	bottom: 10px;
+}
+
+
+
+/* Parallax Intro Animation */
+
+.big-block {
+	position: relative;
+	min-height: 100%;
+	background-image:url(../img/intro_pattern.png);
+}
+
+.shell-1,
+.shell-2,
+.shell-3,
+.shell-4,
+.shell-5
+ {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+
+.shell-1 {
+	top: 500px;
+	padding-right: 280px;
+	width: 144px;
+	height: 144px;
+}
+
+.down-arrow {
+	margin-left: 120px;
+}
+
+.shell-2 {
+	width: 362px;
+	height: 362px;
+	background-image:url(../img/intro-1.png);
+	background-repeat:none;
+	background-size:cover;
+}
+
+.shell-3 {
+	width: 251.5px;
+	height: 290.5px;
+	background-image:url(../img/intro-2.png);
+	background-repeat:none;
+	background-size:cover;
+}
+
+.shell-4 {
+	top: 75px;
+	width: 249.5px;
+	height: 217px;
+	background-image:url(../img/intro-3.png);
+	background-repeat:none;
+	background-size:cover;
+}
+
+.shell-5 {
+	width: 144px;
+	height: 144px;
+	background-image:url(../img/intro-4.png);
+	background-repeat:none;
+	background-size:cover;
+}
+
+@media (min-width: 640px) {
+	.block {
+		min-height: 100%;
+	}
+	
+	.inset {
+		padding-top: 150px;
+		width: 640px;
+	}
+	
+	.two-col {
+		float:left;
+		width: 50%;
+	}
+	.fixed {
+		display:block;
+	}
+	h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 56px;
+	}
+	.shell-1 {
+	top: 750px;
+	padding-right: 370px;
+	width: 144px;
+	height: 144px;
+	}
+	.down-arrow {
+	margin-left: 170px;
+	}
+	.shell-2 {
+	width: 640px;
+	height: 640px;
+	}
+	.shell-3 {
+	width: 503px;
+	height: 581px;
+	}
+	.shell-4 {
+	top: 150px;
+	width: 499px;
+	height: 434px;
+	}
+	.shell-5 {
+	width: 288px;
+	height: 288px;
+	}

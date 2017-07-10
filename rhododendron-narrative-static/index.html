@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Graphics & Photography by Albert Brunda --> 
+
+<!-- Mobile Device -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rhododendron Gardens</title>
+
+<!-- Styleguide -->
+<link rel="stylesheet" href="css/styleguide.css"> 
+<link rel="stylesheet" href="css/image_flip.css">
+
+<!-- jQuery Load in -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- SmoothScroll Plugin -->
+<script src="js/jquery.smooth-scroll.min.js"></script>
+
+<!-- Intro Parallax Plugin -->
+<script src="js/skrollr.js"></script>
+
+<!-- I added these two pluggins as skrollr doesn't work on mobile, so it needs to be disabled-->
+<script src="js/modernizr.js"></script>
+<script src="js/enquire.min.js"></script>
+
+<!-- Own Scripts -->
+<script src="js/jquery-main.js"></script>
+</head>
+
+<body>
+
+<!-- Home Section -->
+<div class="big-block" id="skrollr-body">
+	<div class="shell-1" data-0p="bottom: 0%;" data-100p="bottom: 100%;"> 
+    <h1> RHODODENDRON </h1>
+    <img src="img/d_arrow.png" alt="Down Arrow" class="down-arrow"></div>
+	<div class="shell-2" data-0p="bottom: 0%;" data-100p="bottom: 200%;"></div>
+	<div class="shell-3" data-0p="bottom: 0%;" data-100p="bottom: 300%;"></div>
+    <div class="shell-4" data-0p="bottom: 0%;" data-100p="bottom: 400%;"></div>
+    <div class="shell-5" data-0p="bottom: 0%;" data-100p="bottom: 500%;"></div>
+</div>
+
+<!--- Fixed Home Button -->
+<div class="fixed home"> 
+	<a href="#home"><img src="img/home_button_.png" alt=Home Button></a>
+</div>
+
+<!-- Summer Section -->
+<article id="summer" class="block">
+    <div class="inset">
+    <!-- Animation Slide -->
+        <div class="animate-wrap">  
+                <input type="radio" id="summer-1" name="animation" checked>
+                <input type="radio" id="summer-2" name="animation">
+                
+                <div class="animate">
+                    <label for="summer-2" class="front">
+                        <img src="img/pg_summer_front.png" width="100%" alt="Front." >
+                    </label>
+                    
+                    <label for="summer-1" class="back">
+                        <img src="img/pg_summer_back.png" width="100%" alt="Back.">
+                        <div class="back-text summer-one"> 
+                        	<p>Warm summer morning</p> 
+                            <p>the dew drops fall from the leaves</p> 
+                            <p>to begin anew</p> 
+                        </div>
+                    </label>
+               </div>
+         </div>
+         <h2> SUMMER </h2>
+   	</div>
+</article>
+
+<!-- Spring Section -->
+<article id="spring" class="block">
+    <div class="inset">
+    <!-- Animation Slide -->
+        <div class="animate-wrap">  
+                <input type="radio" id="spring-1" name="animation" checked>
+                <input type="radio" id="spring-2" name="animation">
+                
+                <div class="animate">
+                    <label for="spring-2" class="front">
+                        <img src="img/pg_spring_front.png" width="100%" alt="Front." >
+                    </label>
+                    
+                    <label for="spring-1" class="back">
+                        <img src="img/pg_spring_back.png" width="100%" alt="Back.">
+                        <div class="back-text spring-one"> 
+                        	<p>Radiant valley</p>  
+                        	<p>the hum of the busy bees</p>
+                        	<p>brings the farmer wealth</p> 
+                        </div>
+                    </label>
+               </div>
+         </div>
+         <h2> SPRING </h2>
+   	</div>
+</article>
+
+<!-- Autumn Section -->
+<article id="autumn" class="block">
+    <div class="inset">
+    <!-- Animation Slide -->
+        <div class="animate-wrap">  
+                <input type="radio" id="autumn-1" name="animation" checked>
+                <input type="radio" id="autumn-2" name="animation">
+                
+                <div class="animate">
+                    <label for="autumn-2" class="front">
+                        <img src="img/pg_autumn_front.png" width="100%" alt="Front." >
+                    </label>
+                    
+                    <label for="autumn-1" class="back">
+                        <img src="img/pg_autumn_back.png" width="100%" alt="Back.">
+                        <div class="back-text autumn-one"> 
+                        	<p>Sun painted landscape</p> 
+                        	<p>the fragrance of the resting leaves</p>
+                        	<p>permeates the air</p> 
+                        </div>
+                    </label>
+               </div>
+         </div>
+         <h2> AUTUMN </h2>
+   	</div>
+</article>
+
+<!-- Winter Section -->
+<article id="winter" class="block">
+    <div class="inset">
+    <!-- Animation Slide -->
+        <div class="animate-wrap">  
+                <input type="radio" id="winter-1" name="animation" checked>
+                <input type="radio" id="winter-2" name="animation">
+                
+                <div class="animate">
+                    <label for="winter-2" class="front">
+                        <img src="img/pg_winter_front.png" width="100%" alt="Front." >
+                    </label>
+                    
+                    <label for="winter-1" class="back">
+                        <img src="img/pg_winter_back.png" width="100%" alt="Back.">
+                        <div class="back-text winter-one"> 
+                        	<p>Cool winter twilight</p>
+                        	<p>the air stirs in the moonlight</p>
+                        	<p>an owl spreads its wings</p> 
+                        </div>
+                    </label>
+               </div>
+         </div>
+         <h2> WINTER </h2>
+   	</div>
+</article>
+
+</body>
+<script>
+( function( $ ) {
+
+    function enableSkrollr(){
+        console.log('we are on desktop');
+
+        // Enable Skroll only for non-touch devices
+        if(!Modernizr.touch){
+            var s = skrollr.init({
+                forceHeight: false
+            });
+        }
+
+    }
+
+    function disableSkrollr(){
+        console.log('we are on mobile');
+
+        // Destroy Skrollr
+        var s = skrollr.init();
+        s.destroy();
+    }
+
+    enquire.register("screen and (min-width: 641px)", {
+        match : function() {
+            enableSkrollr();
+        },  
+        unmatch : function() {
+            disableSkrollr();
+        }
+    });
+
+} )( jQuery );
+</script>
+
+</html>

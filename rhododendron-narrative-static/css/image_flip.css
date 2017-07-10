@@ -1,0 +1,123 @@
+/* Source: http://jsfiddle.net/drublic/epHjY/ */ 
+
+/* Wrapper */
+.animate-wrap {
+	padding-top: 20px;
+    position: relative;
+	margin: 0px auto 0px auto;
+    width: 320px;
+	height: 320px;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
+}
+
+.front {
+	width: 480px;
+}
+
+.back {
+	width: 480px;
+}
+
+
+@media (max-width: 640px) {
+	.front {
+		width: 320px;
+	}
+	.back {
+		width: 320px;
+	}
+}
+
+/* Inputs */
+.animate-wrap input {
+    display: none;
+}
+.animate-wrap [type="radio"]:checked + .animate {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* Image-Wrapper */
+.animate {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+/* Labels */
+label {
+    position: absolute; top: 0; left: 0; z-index: 2;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.front {
+    z-index: 1;
+}
+
+/* Image Flip Text */
+
+.back-text {
+	position: relative;
+	font-family: sansation_lightlight;
+	font-size: 12px;
+	text-align:center;
+	color:#FFFFFF;
+	z-index: 15;
+}
+
+/*Haiku Lines */
+.summer-one {
+	top: -210px;
+}
+
+.spring-one {
+	top: -255px;
+}
+
+.autumn-one {
+	top: -210px;
+}
+
+.winter-one {
+	top: -212px;
+}
+
+@media (min-width: 640px) {
+	.animate-wrap {
+		width: 480px; 
+		height: 480px;
+	}
+	.back-text {
+		font-size: 17px;
+	}
+	/* Summer Haiku */
+	.summer-one {
+		top:-300px;
+	}
+	
+	.spring-one {
+		top: -375px;
+	}
+
+	.autumn-one {
+		top: -300px;
+	}
+	
+	.winter-one {
+		top: -305px;
+	}
+
+	
